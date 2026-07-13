@@ -222,6 +222,72 @@ p{line-height:1.65;}
 .step-dot.active{background:var(--ink); color:#fff;}
 .step-dot.done{background:var(--success); color:#fff;}
 @media (max-width:576px){.display-4{font-size:1.9rem;} .stat-num{font-size:1.9rem;}}
+
+/* ==========================================================================
+   PRODUCT STRATEGY HUB — additive module (PM/Capstone deliverables)
+   Reuses existing tokens/components only; adds no new palette.
+   ========================================================================== */
+.pm-hero{background:linear-gradient(155deg,var(--ink),var(--ink-3)); border-radius:28px; padding:32px; color:#fff; position:relative; overflow:hidden;}
+.pm-hero .grid-glow{position:absolute; inset:0; background:radial-gradient(circle at 80% 10%, rgba(238,157,60,.25), transparent 55%), radial-gradient(circle at 5% 95%, rgba(31,169,140,.2), transparent 50%);}
+.pm-tabs{display:flex; gap:8px; overflow-x:auto; overflow-y:hidden; padding:4px 8px 12px; margin-bottom:22px; scrollbar-width:thin; scrollbar-color:rgba(238,157,60,.5) rgba(0,0,0,.05); border-radius:12px; align-items:center; min-height:48px;}
+.pm-tabs::-webkit-scrollbar{height:6px;}
+.pm-tabs::-webkit-scrollbar-track{background:rgba(238,157,60,.1); border-radius:10px;}
+.pm-tabs::-webkit-scrollbar-thumb{background:rgba(238,157,60,.5); border-radius:10px;}
+.pm-tabs::-webkit-scrollbar-thumb:hover{background:rgba(238,157,60,.8);}
+.pm-tab-btn{border:1.5px solid var(--line); border-radius:40px; padding:9px 18px; font-weight:700; font-size:.82rem; white-space:nowrap; cursor:pointer; background:var(--card); color:var(--ink-soft); transition:.15s; flex:0 0 auto;}
+.pm-tab-btn:hover{border-color:var(--saffron); color:var(--ink);}
+.pm-tab-btn.active{background:var(--ink); color:#fff; border-color:var(--ink);}
+.pm-panel{display:none;}
+.pm-panel.active{display:block; animation:fadeSlide .35s ease;}
+.pm-kpi{border:1.5px solid var(--line); border-radius:18px; padding:18px; background:var(--card); height:100%;}
+.pm-kpi .delta{font-size:.74rem; font-weight:700; color:var(--teal-deep);}
+
+.compare-wrap{overflow-x:auto; border-radius:18px; border:1px solid var(--line);}
+.compare-table{width:100%; min-width:760px; border-collapse:separate; border-spacing:0; background:var(--card);}
+.compare-table th,.compare-table td{padding:12px 10px; text-align:center; border-bottom:1px solid var(--line); font-size:.8rem;}
+.compare-table thead th{font-family:var(--display); font-weight:700; background:var(--bg); position:sticky; top:0;}
+.compare-table td:first-child,.compare-table th:first-child{text-align:left; font-weight:600; padding-left:16px;}
+.compare-table .col-hl{background:rgba(238,157,60,.09);}
+.compare-table th.col-hl{color:var(--saffron-deep);}
+.compare-table tr:last-child td{border-bottom:none;}
+
+.moscow-col{border-radius:18px; padding:16px; height:100%;}
+.moscow-must{background:rgba(225,86,107,.07); border:1.5px solid rgba(225,86,107,.25);}
+.moscow-should{background:rgba(238,157,60,.08); border:1.5px solid rgba(238,157,60,.28);}
+.moscow-could{background:rgba(31,169,140,.08); border:1.5px solid rgba(31,169,140,.28);}
+.moscow-wont{background:rgba(92,100,120,.07); border:1.5px solid var(--line);}
+.moscow-chip{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:9px 12px; font-size:.8rem; margin-bottom:8px; font-weight:600;}
+
+.roadmap-track{border-left:3px solid var(--line); padding-left:24px; position:relative; margin-left:6px;}
+.roadmap-phase{position:relative; padding-bottom:30px;}
+.roadmap-phase:last-child{padding-bottom:0;}
+.roadmap-phase .dot{position:absolute; left:-32px; top:3px; width:16px; height:16px; border-radius:50%; background:var(--saffron); box-shadow:0 0 0 5px rgba(238,157,60,.16);}
+.roadmap-phase.future .dot{background:var(--line); box-shadow:none;}
+.roadmap-phase.future .phase-title{color:var(--ink-soft);}
+
+.metric-bar-label{display:flex; justify-content:space-between; font-size:.82rem; font-weight:600; margin-bottom:5px;}
+
+.risk-pill{padding:3px 11px; border-radius:20px; font-size:.72rem; font-weight:700; display:inline-block;}
+.risk-high{background:rgba(225,86,107,.15); color:var(--danger);}
+.risk-med{background:rgba(238,157,60,.16); color:var(--saffron-deep);}
+.risk-low{background:rgba(31,169,140,.15); color:var(--teal-deep);}
+
+.eco-node{border:1.5px solid var(--line); border-radius:16px; padding:16px 10px; text-align:center; background:var(--card); transition:.2s; height:100%;}
+.eco-node:hover{border-color:var(--teal); transform:translateY(-3px); box-shadow:var(--shadow);}
+
+.arch-flow{display:flex; flex-direction:column; align-items:center; gap:0;}
+.arch-node{border:1.5px solid var(--line); border-radius:14px; padding:12px 26px; background:var(--card); font-weight:700; font-size:.86rem; min-width:240px; text-align:center;}
+.arch-node.hl{border-color:var(--saffron); background:rgba(238,157,60,.07); color:var(--saffron-deep);}
+.arch-arrow{color:var(--ink-soft); font-size:.85rem; margin:3px 0;}
+
+.funnel-row{display:flex; align-items:center; gap:12px; margin-bottom:9px;}
+.funnel-bar{height:36px; border-radius:8px; background:linear-gradient(90deg,var(--saffron),var(--teal)); display:flex; align-items:center; color:#fff; font-weight:700; font-size:.78rem; padding-left:14px;}
+
+.heat-grid{display:grid; grid-template-columns:repeat(7,1fr); gap:5px;}
+.heat-cell{aspect-ratio:1; border-radius:5px;}
+.pm-persona-mini{border:1.5px solid var(--line); border-radius:18px; padding:18px; height:100%; background:var(--card);}
+.pm-persona-mini .tag-row{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;}
+.pm-persona-mini .tag-row span{background:rgba(31,169,140,.1); color:var(--teal-deep); font-size:.68rem; font-weight:700; padding:3px 9px; border-radius:20px;}
 </style>
 </head>
 <body>
@@ -253,6 +319,7 @@ p{line-height:1.65;}
             <li><button class="dropdown-item rounded-3" onclick="setLang('gu')">ગુજરાતી (Gujarati)</button></li>
           </ul>
         </li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#" onclick="go('pm-hub')"><i class="fas fa-diagram-project me-1"></i>Product Strategy</a></li>
         <li class="nav-item"><a class="btn btn-outline-custom btn-sm px-4" href="#" onclick="go('login')" data-i18n="nav_login">Login</a></li>
         <li class="nav-item"><a class="btn btn-primary-custom btn-sm px-4" href="#" onclick="go('signup')" data-i18n="nav_signup">Sign up</a></li>
       </ul>
@@ -966,6 +1033,346 @@ p{line-height:1.65;}
   </div>
 </div>
 
+<!-- ============================================================ PRODUCT STRATEGY HUB (Capstone deliverables) ============================================================ -->
+<div id="page-pm-hub" class="page-section">
+  <div class="container py-3" style="max-width:1080px;">
+    <div id="pmHubTop" class="pm-hero mb-4" data-aos="fade-up">
+      <div class="grid-glow"></div>
+      <div class="position-relative">
+        <span class="badge-ai mb-3"><i class="fas fa-briefcase me-2"></i>Product Matters 6.0 · Capstone</span>
+        <h2 class="serif-display mb-2">Product Strategy &amp; Insights</h2>
+        <p class="opacity-75 mb-0" style="max-width:640px;">The thinking behind IndusProtect AI — vision, research, personas, prioritization, metrics, GTM and roadmap. This section is for reviewers; the tabs below hold every deliverable in one place.</p>
+      </div>
+    </div>
+
+    <div class="pm-tabs">
+      <button class="pm-tab-btn active" data-pm="vision" onclick="pmTab('vision')"><i class="fas fa-compass me-1"></i>Vision &amp; KPIs</button>
+      <button class="pm-tab-btn" data-pm="market" onclick="pmTab('market')"><i class="fas fa-chart-line me-1"></i>Market &amp; Competition</button>
+      <button class="pm-tab-btn" data-pm="persona" onclick="pmTab('persona')"><i class="fas fa-users me-1"></i>Personas</button>
+      <button class="pm-tab-btn" data-pm="roadmap" onclick="pmTab('roadmap')"><i class="fas fa-road me-1"></i>Prioritization &amp; Roadmap</button>
+      <button class="pm-tab-btn" data-pm="metrics" onclick="pmTab('metrics')"><i class="fas fa-gauge-high me-1"></i>Success Metrics</button>
+      <button class="pm-tab-btn" data-pm="gtm" onclick="pmTab('gtm')"><i class="fas fa-rocket me-1"></i>GTM Strategy</button>
+      <button class="pm-tab-btn" data-pm="risk" onclick="pmTab('risk')"><i class="fas fa-triangle-exclamation me-1"></i>Risk &amp; Monetization</button>
+      <button class="pm-tab-btn" data-pm="ecosystem" onclick="pmTab('ecosystem')"><i class="fas fa-diagram-project me-1"></i>Ecosystem &amp; AI</button>
+      <button class="pm-tab-btn" data-pm="analytics" onclick="pmTab('analytics')"><i class="fas fa-chart-pie me-1"></i>Analytics &amp; Architecture</button>
+    </div>
+
+    <!-- VISION & KPIs -->
+    <div class="pm-panel active" id="pm-vision">
+      <div class="row g-3 mb-4">
+        <div class="col-md-6" data-aos="fade-up"><div class="card-soft p-4 h-100"><div class="eyebrow mb-2">Mission</div><p class="mb-0">To turn insurance from a forgotten annual chore into an always-on protection partner for every IndusInd Bank customer.</p></div></div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="50"><div class="card-soft p-4 h-100"><div class="eyebrow mb-2">Vision</div><p class="mb-0">A single AI-powered rail where every Indian discovers, buys, manages and claims insurance as easily as they check their bank balance.</p></div></div>
+        <div class="col-md-6" data-aos="fade-up"><div class="card-soft p-4 h-100"><div class="eyebrow mb-2">Value proposition</div><p class="mb-0">One dashboard for every policy. AI that explains instead of just sells. Claims tracked live, in hours not weeks. Rewards for safe, protected behaviour.</p></div></div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="50"><div class="card-soft p-4 h-100" style="background:linear-gradient(135deg,var(--ink),var(--ink-3)); color:#fff;"><div class="eyebrow mb-2" style="color:var(--saffron)">North star metric</div><div class="stat-num" style="color:var(--saffron)">MAPC</div><p class="mb-0 opacity-75 small">Monthly Active Protected Customers — customers holding ≥1 active policy who engaged with the app in the last 30 days.</p></div></div>
+      </div>
+
+      <h5 class="fw-bold mb-3">Business objectives</h5>
+      <div class="row g-3">
+        <div class="col-6 col-md-4" data-aos="fade-up"><div class="pm-kpi"><i class="fas fa-arrow-trend-up mb-2" style="color:var(--saffron-deep)"></i><div class="stat-num" style="font-size:1.7rem">+35%</div><div class="small text-soft">Insurance adoption among banking customers</div></div></div>
+        <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="50"><div class="pm-kpi"><i class="fas fa-arrows-rotate mb-2" style="color:var(--saffron-deep)"></i><div class="stat-num" style="font-size:1.7rem">+28%</div><div class="small text-soft">Policy renewal rate</div></div></div>
+        <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="pm-kpi"><i class="fas fa-hourglass-end mb-2" style="color:var(--teal-deep)"></i><div class="stat-num" style="font-size:1.7rem">-70%</div><div class="small text-soft">Claim processing time</div></div></div>
+        <div class="col-6 col-md-4" data-aos="fade-up"><div class="pm-kpi"><i class="fas fa-heart mb-2" style="color:var(--teal-deep)"></i><div class="stat-num" style="font-size:1.7rem">+40%</div><div class="small text-soft">Customer retention</div></div></div>
+        <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="50"><div class="pm-kpi"><i class="fas fa-star mb-2" style="color:var(--saffron-deep)"></i><div class="stat-num" style="font-size:1.7rem">4.8★</div><div class="small text-soft">Target customer satisfaction</div></div></div>
+        <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="pm-kpi"><i class="fas fa-layer-group mb-2" style="color:var(--teal-deep)"></i><div class="stat-num" style="font-size:1.7rem">3.2×</div><div class="small text-soft">Cross-sell opportunities unlocked</div></div></div>
+      </div>
+    </div>
+
+    <!-- MARKET & COMPETITION -->
+    <div class="pm-panel" id="pm-market">
+      <div class="eyebrow mb-2">Problem understanding</div>
+      <h5 class="fw-bold mb-3">Why insurance needs transformation</h5>
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="card-flat p-3 h-100"><div class="stat-num" style="font-size:1.6rem;color:var(--saffron-deep)">65%</div><div class="small text-soft">users forget policy renewals</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="50"><div class="card-flat p-3 h-100"><div class="stat-num" style="font-size:1.6rem;color:var(--saffron-deep)">70%</div><div class="small text-soft">struggle to understand their policy</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100"><div class="card-flat p-3 h-100"><div class="stat-num" style="font-size:1.6rem;color:var(--saffron-deep)">45%</div><div class="small text-soft">claims delayed by documentation</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150"><div class="card-flat p-3 h-100"><div class="stat-num" style="font-size:1.6rem;color:var(--saffron-deep)">4+</div><div class="small text-soft">disconnected apps to manage policies</div></div></div>
+        <div class="small text-soft mt-1">Illustrative figures for prototype purposes, based on common industry pain points.</div>
+      </div>
+      <div class="row g-3 mb-4">
+        <div class="col-md-3 col-6" data-aos="fade-up"><div class="card-soft p-3 h-100"><i class="fas fa-puzzle-piece mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Fragmented experience</div></div></div>
+        <div class="col-md-3 col-6" data-aos="fade-up"><div class="card-soft p-3 h-100"><i class="fas fa-eye-slash mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Low transparency</div></div></div>
+        <div class="col-md-3 col-6" data-aos="fade-up"><div class="card-soft p-3 h-100"><i class="fas fa-hourglass-half mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Slow claim processing</div></div></div>
+        <div class="col-md-3 col-6" data-aos="fade-up"><div class="card-soft p-3 h-100"><i class="fas fa-comment-slash mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Poor engagement</div></div></div>
+        <div class="col-md-3 col-6" data-aos="fade-up"><div class="card-soft p-3 h-100"><i class="fas fa-calendar-xmark mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Low renewal rates</div></div></div>
+        <div class="col-md-3 col-6" data-aos="fade-up"><div class="card-soft p-3 h-100"><i class="fas fa-book mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Technical jargon</div></div></div>
+        <div class="col-md-3 col-6" data-aos="fade-up"><div class="card-soft p-3 h-100"><i class="fas fa-file-pen mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Manual documentation</div></div></div>
+        <div class="col-md-3 col-6" data-aos="fade-up"><div class="card-soft p-3 h-100"><i class="fas fa-layer-group mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Multiple policy silos</div></div></div>
+      </div>
+
+      <h5 class="fw-bold mb-3">Competitor comparison</h5>
+      <div class="compare-wrap mb-2">
+        <table class="compare-table">
+          <thead><tr><th>Capability</th><th>PolicyBazaar</th><th>ACKO</th><th>Digit</th><th>ICICI Lombard</th><th>Tata AIG</th><th class="col-hl">IndusProtect AI</th></tr></thead>
+          <tbody>
+            <tr><td>AI recommendation</td><td>Partial</td><td>Partial</td><td>—</td><td>—</td><td>—</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+            <tr><td>Unified dashboard</td><td>—</td><td>Partial</td><td>Partial</td><td>—</td><td>—</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+            <tr><td>Digital wallet</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+            <tr><td>Voice assistant</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+            <tr><td>Rewards program</td><td>Partial</td><td>—</td><td>Partial</td><td>—</td><td>—</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+            <tr><td>AI-assisted claims</td><td>—</td><td>Partial</td><td>Partial</td><td>—</td><td>—</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+            <tr><td>Smart renewal</td><td>Partial</td><td>Partial</td><td>—</td><td>Partial</td><td>—</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+            <tr><td>Personalization</td><td>—</td><td>Partial</td><td>—</td><td>—</td><td>—</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+            <tr><td>Accessibility (voice, regional language)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+            <tr><td>Bank ecosystem integration</td><td>—</td><td>—</td><td>—</td><td>Partial</td><td>Partial</td><td class="col-hl"><i class="fas fa-circle-check" style="color:var(--success)"></i></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="small text-soft">Illustrative positioning for prototype purposes, based on publicly known product feature sets.</div>
+    </div>
+
+    <!-- PERSONAS -->
+    <div class="pm-panel" id="pm-persona">
+      <div class="eyebrow mb-2">Who we're building for</div>
+      <h5 class="fw-bold mb-3">User personas</h5>
+      <div class="row g-3">
+        <div class="col-md-4 col-sm-6" data-aos="fade-up">
+          <div class="pm-persona-mini"><i class="fas fa-user-tie fa-lg mb-2" style="color:var(--saffron-deep)"></i>
+            <div class="fw-bold">Young Professional</div>
+            <p class="small text-soft mb-1">Goal: fast, self-serve cover for vehicle &amp; health.</p>
+            <p class="small text-soft mb-1">Pain point: no time to compare 10 apps.</p>
+            <p class="small text-soft mb-0">Digital behaviour: mobile-first, UPI native.</p>
+            <div class="tag-row"><span>Motor</span><span>Health</span><span>Cyber</span></div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="pm-persona-mini"><i class="fas fa-people-roof fa-lg mb-2" style="color:var(--saffron-deep)"></i>
+            <div class="fw-bold">Family</div>
+            <p class="small text-soft mb-1">Goal: one policy covering every member.</p>
+            <p class="small text-soft mb-1">Pain point: confusing sub-limits and add-ons.</p>
+            <p class="small text-soft mb-0">Digital behaviour: researches on app, decides together.</p>
+            <div class="tag-row"><span>Health</span><span>Home</span><span>Travel</span></div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="pm-persona-mini"><i class="fas fa-heart fa-lg mb-2" style="color:var(--saffron-deep)"></i>
+            <div class="fw-bold">Senior Citizen</div>
+            <p class="small text-soft mb-1">Goal: simple renewal, no jargon.</p>
+            <p class="small text-soft mb-1">Pain point: small text, complex forms.</p>
+            <p class="small text-soft mb-0">Digital behaviour: prefers voice &amp; large text.</p>
+            <div class="tag-row"><span>Health</span><span>Voice assist</span></div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up">
+          <div class="pm-persona-mini"><i class="fas fa-briefcase fa-lg mb-2" style="color:var(--saffron-deep)"></i>
+            <div class="fw-bold">Business Owner</div>
+            <p class="small text-soft mb-1">Goal: protect assets, fleet &amp; premises.</p>
+            <p class="small text-soft mb-1">Pain point: managing multiple commercial policies.</p>
+            <p class="small text-soft mb-0">Digital behaviour: values dashboards &amp; reports.</p>
+            <div class="tag-row"><span>Motor fleet</span><span>Home/Office</span></div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="pm-persona-mini"><i class="fas fa-tractor fa-lg mb-2" style="color:var(--saffron-deep)"></i>
+            <div class="fw-bold">Rural Customer</div>
+            <p class="small text-soft mb-1">Goal: affordable, easy-to-understand cover.</p>
+            <p class="small text-soft mb-1">Pain point: low digital literacy, language barrier.</p>
+            <p class="small text-soft mb-0">Digital behaviour: regional language, voice-first.</p>
+            <div class="tag-row"><span>Health</span><span>Motor</span></div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="pm-persona-mini"><i class="fas fa-star fa-lg mb-2" style="color:var(--saffron-deep)"></i>
+            <div class="fw-bold">First-time Buyer</div>
+            <p class="small text-soft mb-1">Goal: understand what insurance even covers.</p>
+            <p class="small text-soft mb-1">Pain point: overwhelmed by choice &amp; terms.</p>
+            <p class="small text-soft mb-0">Digital behaviour: relies on AI chat/voice guidance.</p>
+            <div class="tag-row"><span>AI chat</span><span>Education</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRIORITIZATION & ROADMAP -->
+    <div class="pm-panel" id="pm-roadmap">
+      <div class="eyebrow mb-2">Feature prioritization</div>
+      <h5 class="fw-bold mb-3">MoSCoW framework</h5>
+      <div class="row g-3 mb-5">
+        <div class="col-md-3 col-sm-6"><div class="moscow-col moscow-must" data-aos="fade-up">
+          <div class="fw-bold mb-2"><i class="fas fa-circle-exclamation me-1"></i>Must have</div>
+          <div class="moscow-chip">AI plan recommendation</div><div class="moscow-chip">Buy &amp; manage policies</div><div class="moscow-chip">Digital claim filing</div><div class="moscow-chip">Live claim tracking</div><div class="moscow-chip">Renewal reminders</div>
+        </div></div>
+        <div class="col-md-3 col-sm-6"><div class="moscow-col moscow-should" data-aos="fade-up" data-aos-delay="50">
+          <div class="fw-bold mb-2"><i class="fas fa-circle-check me-1"></i>Should have</div>
+          <div class="moscow-chip">Voice assistant</div><div class="moscow-chip">Digital wallet</div><div class="moscow-chip">Rewards &amp; badges</div><div class="moscow-chip">AI fraud shield</div>
+        </div></div>
+        <div class="col-md-3 col-sm-6"><div class="moscow-col moscow-could" data-aos="fade-up" data-aos-delay="100">
+          <div class="fw-bold mb-2"><i class="fas fa-circle-plus me-1"></i>Could have</div>
+          <div class="moscow-chip">Ecosystem integrations</div><div class="moscow-chip">Telematics-based pricing</div><div class="moscow-chip">IoT-connected home cover</div>
+        </div></div>
+        <div class="col-md-3 col-sm-6"><div class="moscow-col moscow-wont" data-aos="fade-up" data-aos-delay="150">
+          <div class="fw-bold mb-2"><i class="fas fa-circle-minus me-1"></i>Won't have (v1)</div>
+          <div class="moscow-chip">Blockchain claim verification</div><div class="moscow-chip">Fully autonomous underwriting</div>
+        </div></div>
+      </div>
+
+      <div class="eyebrow mb-2">Execution</div>
+      <h5 class="fw-bold mb-3">Product roadmap</h5>
+      <div class="roadmap-track">
+        <div class="roadmap-phase" data-aos="fade-up"><div class="dot"></div><div class="phase-title fw-bold">Phase 1 · Launch</div><div class="small text-soft">Core rail — discover, compare, buy, claim, renew, wallet, rewards.</div></div>
+        <div class="roadmap-phase" data-aos="fade-up"><div class="dot"></div><div class="phase-title fw-bold">Phase 2 · AI OCR</div><div class="small text-soft">Auto-read documents to pre-fill applications and claims.</div></div>
+        <div class="roadmap-phase future" data-aos="fade-up"><div class="dot"></div><div class="phase-title fw-bold">Phase 3 · AI damage detection</div><div class="small text-soft">Photo-based preliminary damage assessment for motor claims.</div></div>
+        <div class="roadmap-phase future" data-aos="fade-up"><div class="dot"></div><div class="phase-title fw-bold">Phase 4 · Blockchain verification</div><div class="small text-soft">Tamper-proof claim &amp; document trail.</div></div>
+        <div class="roadmap-phase future" data-aos="fade-up"><div class="dot"></div><div class="phase-title fw-bold">Phase 5 · Telematics</div><div class="small text-soft">Usage-based pricing from driving behaviour.</div></div>
+        <div class="roadmap-phase future" data-aos="fade-up"><div class="dot"></div><div class="phase-title fw-bold">Phase 6 · IoT-connected insurance</div><div class="small text-soft">Home &amp; vehicle sensors feeding real-time risk data.</div></div>
+        <div class="roadmap-phase future" data-aos="fade-up"><div class="dot"></div><div class="phase-title fw-bold">Phase 7 · Fully autonomous insurance</div><div class="small text-soft">End-to-end AI underwriting, pricing and settlement.</div></div>
+      </div>
+    </div>
+
+    <!-- SUCCESS METRICS -->
+    <div class="pm-panel" id="pm-metrics">
+      <div class="eyebrow mb-2">Product execution</div>
+      <h5 class="fw-bold mb-1">Success metrics dashboard</h5>
+      <div class="card-soft p-4 mb-4 text-center" style="background:linear-gradient(135deg,var(--ink),var(--ink-3)); color:#fff;" data-aos="fade-up">
+        <div class="small opacity-75 mb-1">North star metric</div>
+        <div class="stat-num" style="color:var(--saffron)">Monthly Active Protected Customers</div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="metric-bar-label"><span>Daily active users</span><span>62%</span></div><div class="progress-track mb-3"><div class="bar" style="width:62%"></div></div>
+          <div class="metric-bar-label"><span>Renewal rate</span><span>71%</span></div><div class="progress-track mb-3"><div class="bar" style="width:71%"></div></div>
+          <div class="metric-bar-label"><span>Claim processing time (vs. industry)</span><span>36 hrs</span></div><div class="progress-track mb-3"><div class="bar" style="width:88%"></div></div>
+          <div class="metric-bar-label"><span>Net promoter score</span><span>58</span></div><div class="progress-track mb-3"><div class="bar" style="width:58%"></div></div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="metric-bar-label"><span>Customer satisfaction</span><span>4.8 / 5</span></div><div class="progress-track mb-3"><div class="bar" style="width:96%"></div></div>
+          <div class="metric-bar-label"><span>Customer retention</span><span>84%</span></div><div class="progress-track mb-3"><div class="bar" style="width:84%"></div></div>
+          <div class="metric-bar-label"><span>Avg. session time</span><span>4m 20s</span></div><div class="progress-track mb-3"><div class="bar" style="width:66%"></div></div>
+          <div class="metric-bar-label"><span>Digital adoption / cross-sell rate</span><span>47%</span></div><div class="progress-track mb-3"><div class="bar" style="width:47%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GTM STRATEGY -->
+    <div class="pm-panel" id="pm-gtm">
+      <div class="eyebrow mb-2">Go-to-market</div>
+      <h5 class="fw-bold mb-3">Launch strategy</h5>
+      <div class="row g-3 mb-4">
+        <div class="col-md-4" data-aos="fade-up"><div class="card-soft p-3 h-100"><div class="fw-semibold mb-1"><i class="fas fa-bullseye me-2" style="color:var(--saffron-deep)"></i>Target audience</div><p class="small text-soft mb-0">Existing IndusInd Bank retail customers, starting with digitally active metro users, expanding to Tier-2/3.</p></div></div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="50"><div class="card-soft p-3 h-100"><div class="fw-semibold mb-1"><i class="fas fa-bullhorn me-2" style="color:var(--saffron-deep)"></i>Marketing channels</div><p class="small text-soft mb-0">In-app banking prompts, SMS/WhatsApp nudges, branch staff referrals, digital campaigns.</p></div></div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="card-soft p-3 h-100"><div class="fw-semibold mb-1"><i class="fas fa-building-columns me-2" style="color:var(--saffron-deep)"></i>Bank integration</div><p class="small text-soft mb-0">Embedded inside net-banking &amp; the IndusInd app — insurance as a native banking tab.</p></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card-soft p-3 h-100"><div class="fw-semibold mb-1"><i class="fas fa-user-plus me-2" style="color:var(--saffron-deep)"></i>Referral program</div><p class="small text-soft mb-0">Reward points for both referrer &amp; referee on first policy purchase.</p></div></div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="50"><div class="card-soft p-3 h-100"><div class="fw-semibold mb-1"><i class="fas fa-handshake me-2" style="color:var(--saffron-deep)"></i>Partnership strategy</div><p class="small text-soft mb-0">Garage networks, hospitals, roadside assistance and travel partners for ecosystem value.</p></div></div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="card-soft p-3 h-100"><div class="fw-semibold mb-1"><i class="fas fa-gem me-2" style="color:var(--saffron-deep)"></i>Reward program</div><p class="small text-soft mb-0">Points for safe driving, timely renewals and digital-first engagement.</p></div></div>
+      </div>
+      <h5 class="fw-bold mb-3">Expected adoption timeline</h5>
+      <div class="funnel-row" data-aos="fade-up"><span class="small" style="width:110px">Quarter 1</span><div class="funnel-bar" style="width:30%">Soft launch</div></div>
+      <div class="funnel-row" data-aos="fade-up" data-aos-delay="50"><span class="small" style="width:110px">Quarter 2</span><div class="funnel-bar" style="width:50%">Metro rollout</div></div>
+      <div class="funnel-row" data-aos="fade-up" data-aos-delay="100"><span class="small" style="width:110px">Quarter 3</span><div class="funnel-bar" style="width:75%">Tier-2/3 expansion</div></div>
+      <div class="funnel-row" data-aos="fade-up" data-aos-delay="150"><span class="small" style="width:110px">Quarter 4</span><div class="funnel-bar" style="width:95%">National scale</div></div>
+    </div>
+
+    <!-- RISK & MONETIZATION -->
+    <div class="pm-panel" id="pm-risk">
+      <div class="eyebrow mb-2">Assumptions &amp; risks</div>
+      <h5 class="fw-bold mb-3">Risk analysis</h5>
+      <div class="compare-wrap mb-4">
+        <table class="compare-table risk-table">
+          <thead><tr><th>Risk</th><th>Impact</th><th>Probability</th><th>Mitigation</th></tr></thead>
+          <tbody>
+            <tr><td>Low AI trust</td><td><span class="risk-pill risk-med">Medium</span></td><td><span class="risk-pill risk-med">Medium</span></td><td class="small text-soft">Explainable AI, always show reasoning, human fallback.</td></tr>
+            <tr><td>Privacy concerns</td><td><span class="risk-pill risk-high">High</span></td><td><span class="risk-pill risk-med">Medium</span></td><td class="small text-soft">Transparent consent, on-device processing where possible.</td></tr>
+            <tr><td>Fraud</td><td><span class="risk-pill risk-high">High</span></td><td><span class="risk-pill risk-low">Low</span></td><td class="small text-soft">AI fraud shield screens every claim in real time.</td></tr>
+            <tr><td>Low digital literacy</td><td><span class="risk-pill risk-med">Medium</span></td><td><span class="risk-pill risk-high">High</span></td><td class="small text-soft">Voice assistant, regional languages, large-text mode.</td></tr>
+            <tr><td>Data security</td><td><span class="risk-pill risk-high">High</span></td><td><span class="risk-pill risk-low">Low</span></td><td class="small text-soft">Bank-grade encryption, biometric auth.</td></tr>
+            <tr><td>Regulatory change</td><td><span class="risk-pill risk-med">Medium</span></td><td><span class="risk-pill risk-med">Medium</span></td><td class="small text-soft">Modular compliance layer, close IRDAI alignment.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h5 class="fw-bold mb-3">Monetization strategy</h5>
+      <div class="row g-3">
+        <div class="col-md-4 col-sm-6" data-aos="fade-up"><div class="card-flat p-3 h-100"><i class="fas fa-percent mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Policy commission</div><p class="small text-soft mb-0">Standard commission on every policy sold.</p></div></div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up"><div class="card-flat p-3 h-100"><i class="fas fa-crown mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Premium plans</div><p class="small text-soft mb-0">Priority claims &amp; concierge support tier.</p></div></div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up"><div class="card-flat p-3 h-100"><i class="fas fa-layer-group mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Cross-sell</div><p class="small text-soft mb-0">Bundled home, travel &amp; cyber add-ons.</p></div></div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up"><div class="card-flat p-3 h-100"><i class="fas fa-handshake-angle mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Partner services</div><p class="small text-soft mb-0">Garage, hospital &amp; travel partner referral fees.</p></div></div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up"><div class="card-flat p-3 h-100"><i class="fas fa-calendar-check mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Subscription</div><p class="small text-soft mb-0">Optional protection-plus membership.</p></div></div>
+        <div class="col-md-4 col-sm-6" data-aos="fade-up"><div class="card-flat p-3 h-100"><i class="fas fa-vault mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Financial marketplace &amp; loyalty</div><p class="small text-soft mb-0">Cross-links to loans, investments &amp; reward redemption.</p></div></div>
+      </div>
+    </div>
+
+    <!-- ECOSYSTEM & AI -->
+    <div class="pm-panel" id="pm-ecosystem">
+      <div class="eyebrow mb-2">Beyond insurance</div>
+      <h5 class="fw-bold mb-3">Ecosystem integration</h5>
+      <div class="row g-3 mb-5">
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-notes-medical fa-lg mb-2" style="color:var(--teal-deep)"></i><div class="small fw-semibold">Health &amp; telemedicine</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-car fa-lg mb-2" style="color:var(--teal-deep)"></i><div class="small fw-semibold">Roadside assistance</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-screwdriver-wrench fa-lg mb-2" style="color:var(--teal-deep)"></i><div class="small fw-semibold">Vehicle servicing</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-house-chimney fa-lg mb-2" style="color:var(--teal-deep)"></i><div class="small fw-semibold">Home assistance</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-truck-medical fa-lg mb-2" style="color:var(--teal-deep)"></i><div class="small fw-semibold">Emergency SOS</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-plane mb-2 fa-lg" style="color:var(--teal-deep)"></i><div class="small fw-semibold">Travel assistance</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-hospital fa-lg mb-2" style="color:var(--saffron-deep)"></i><div class="small fw-semibold">Hospital network</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-building fa-lg mb-2" style="color:var(--saffron-deep)"></i><div class="small fw-semibold">Bank accounts</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-indian-rupee-sign fa-lg mb-2" style="color:var(--saffron-deep)"></i><div class="small fw-semibold">UPI payments</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-money-bill fa-lg mb-2" style="color:var(--saffron-deep)"></i><div class="small fw-semibold">Loans</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node"><i class="fas fa-chart-line fa-lg mb-2" style="color:var(--saffron-deep)"></i><div class="small fw-semibold">Investments</div></div></div>
+        <div class="col-4 col-md-2" data-aos="fade-up"><div class="eco-node" style="border-color:var(--ink);background:var(--ink);color:#fff;"><i class="fas fa-diagram-project fa-lg mb-2" style="color:var(--saffron)"></i><div class="small fw-semibold">All connected</div></div></div>
+      </div>
+
+      <div class="eyebrow mb-2">Personalization</div>
+      <h5 class="fw-bold mb-3">My AI — personalization engine</h5>
+      <div class="row g-3">
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="card-flat p-3 h-100 text-center"><i class="fas fa-gauge-high mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Insurance score</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="card-flat p-3 h-100 text-center"><i class="fas fa-baby mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Life events</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="card-flat p-3 h-100 text-center"><i class="fas fa-lightbulb mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Smart suggestions</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="card-flat p-3 h-100 text-center"><i class="fas fa-shield-heart mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Policy health</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="card-flat p-3 h-100 text-center"><i class="fas fa-triangle-exclamation mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Risk analysis</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="card-flat p-3 h-100 text-center"><i class="fas fa-piggy-bank mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Savings tracker</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="card-flat p-3 h-100 text-center"><i class="fas fa-wand-magic-sparkles mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">Recommendations</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="card-flat p-3 h-100 text-center"><i class="fas fa-comments mb-2" style="color:var(--saffron-deep)"></i><div class="fw-semibold small">AI chat &amp; voice</div></div></div>
+      </div>
+      <div class="small text-soft mt-3">Live versions of the AI recommendation, risk score and chat are already in the app — see <a href="#" onclick="go('home')" class="fw-semibold">Home</a>, <a href="#" onclick="go('ai-recommendation')" class="fw-semibold">AI Recommendation</a> and <a href="#" onclick="go('ai-chat')" class="fw-semibold">AI Chat</a>.</div>
+    </div>
+
+    <!-- ANALYTICS & ARCHITECTURE -->
+    <div class="pm-panel" id="pm-analytics">
+      <div class="eyebrow mb-2">Product analytics</div>
+      <h5 class="fw-bold mb-3">Analytics dashboard</h5>
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="pm-kpi text-center"><div class="stat-num" style="font-size:1.5rem">18.4K</div><div class="small text-soft">Daily active users</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="pm-kpi text-center"><div class="stat-num" style="font-size:1.5rem">4.2L+</div><div class="small text-soft">Policies purchased</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="pm-kpi text-center"><div class="stat-num" style="font-size:1.5rem">9,140</div><div class="small text-soft">Claims filed</div></div></div>
+        <div class="col-6 col-md-3" data-aos="fade-up"><div class="pm-kpi text-center"><div class="stat-num" style="font-size:1.5rem">36 hrs</div><div class="small text-soft">Avg. claim approval time</div></div></div>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="fw-semibold mb-2">Conversion funnel</div>
+          <div class="funnel-row"><span class="small" style="width:80px">Visit</span><div class="funnel-bar" style="width:100%">100%</div></div>
+          <div class="funnel-row"><span class="small" style="width:80px">Quote</span><div class="funnel-bar" style="width:68%">68%</div></div>
+          <div class="funnel-row"><span class="small" style="width:80px">Compare</span><div class="funnel-bar" style="width:44%">44%</div></div>
+          <div class="funnel-row"><span class="small" style="width:80px">Buy</span><div class="funnel-bar" style="width:27%">27%</div></div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="fw-semibold mb-2">Engagement heatmap (7-day)</div>
+          <div class="heat-grid">
+            <div class="heat-cell" style="background:rgba(238,157,60,.25)"></div><div class="heat-cell" style="background:rgba(238,157,60,.4)"></div><div class="heat-cell" style="background:rgba(238,157,60,.55)"></div><div class="heat-cell" style="background:rgba(238,157,60,.7)"></div><div class="heat-cell" style="background:rgba(238,157,60,.85)"></div><div class="heat-cell" style="background:rgba(238,157,60,.5)"></div><div class="heat-cell" style="background:rgba(238,157,60,.3)"></div>
+            <div class="heat-cell" style="background:rgba(31,169,140,.2)"></div><div class="heat-cell" style="background:rgba(31,169,140,.35)"></div><div class="heat-cell" style="background:rgba(31,169,140,.6)"></div><div class="heat-cell" style="background:rgba(31,169,140,.8)"></div><div class="heat-cell" style="background:rgba(31,169,140,.9)"></div><div class="heat-cell" style="background:rgba(31,169,140,.55)"></div><div class="heat-cell" style="background:rgba(31,169,140,.25)"></div>
+            <div class="heat-cell" style="background:rgba(225,86,107,.15)"></div><div class="heat-cell" style="background:rgba(225,86,107,.3)"></div><div class="heat-cell" style="background:rgba(225,86,107,.5)"></div><div class="heat-cell" style="background:rgba(225,86,107,.65)"></div><div class="heat-cell" style="background:rgba(225,86,107,.8)"></div><div class="heat-cell" style="background:rgba(225,86,107,.45)"></div><div class="heat-cell" style="background:rgba(225,86,107,.2)"></div>
+          </div>
+          <div class="small text-soft mt-2">Mon–Sun · lighter = lower engagement, darker = higher.</div>
+        </div>
+      </div>
+
+      <div class="eyebrow mb-2">Bonus · under the hood</div>
+      <h5 class="fw-bold mb-3">Technical architecture</h5>
+      <div class="arch-flow" data-aos="fade-up">
+        <div class="arch-node">Customer</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node">Frontend (this app)</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node hl">AI Engine</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node">Recommendation Engine</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node">Claims Engine</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node">OCR</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node hl">Fraud Detection</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node">Notification Service</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node">Payment Gateway</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node">Bank Systems</div><i class="fas fa-arrow-down arch-arrow"></i>
+        <div class="arch-node">Insurance Providers</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <button class="fab-sos" onclick="go('emergency')" title="Emergency SOS">SOS</button>
 
 <div class="bottom-nav d-flex justify-content-around py-2">
@@ -1259,6 +1666,20 @@ function launchConfetti(){
     else ctx.clearRect(0,0,canvas.width,canvas.height);
   }
   draw();
+}
+
+/* =========================================================
+   PRODUCT STRATEGY HUB — internal tab switching
+   ========================================================= */
+function pmTab(name){
+  document.querySelectorAll('.pm-panel').forEach(p=>p.classList.remove('active'));
+  const panel=document.getElementById('pm-'+name);
+  if(panel) panel.classList.add('active');
+  document.querySelectorAll('.pm-tab-btn').forEach(b=>b.classList.remove('active'));
+  const btn=document.querySelector('.pm-tab-btn[data-pm="'+name+'"]');
+  if(btn) btn.classList.add('active');
+  const top=document.getElementById('pmHubTop');
+  if(top) top.scrollIntoView({behavior:'smooth', block:'start'});
 }
 
 /* Init */
